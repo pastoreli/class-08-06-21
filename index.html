@@ -1,0 +1,137 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <div class="flex justify-space-between align-center">
+          <div>
+            <a href="#" class="text-bold text-uppercase black--text">Igor Pastoreli</a>
+          </div>
+          <div class="none block-md">
+            <a href="#projects" class="text-bold text-uppercase black--text">Projetos</a>
+            <a href="#about" class="text-bold text-uppercase black--text">Sobre</a>
+          </div>
+          <div class="d-flex block none-md">
+            <i class="menu-btn mdi mdi-menu" onClick="handleMenu()"></i>
+          </div>
+        </div>
+        <div id="header-menu" class="header-mobile-menu none none-md flex align-center">
+          <a href="#projects" class="text-title text-bold text-uppercase black--text">Projetos</a>
+          <a href="#about" class="text-title text-bold text-uppercase black--text">Sobre</a>
+        </div>
+      </div>
+    </header>
+    <section id="presentation">
+      <img
+        src="https://source.unsplash.com/Gg7uKdHFb_c/1900x1080"
+        alt="Imagem de apresentação"
+        loading="lazy" />
+      <div class="presentation-content flex align-center justify-center">
+        <div class="text-center">
+          <h1 class="text-heading white--text">Meu nome e Sobrenome</h1>
+          <h2 class="text-heading white--text">Front-End</h2>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <h2 class="text-center text-title">Projetos</h2>
+      <div class="flex gap-default flex-wrap">
+        <div class="card text-center">
+          <img
+            src="https://source.unsplash.com/1rBg5YSi00c/200x200"
+            alt="Capa do projeto 1"
+            loading="lazy"
+            class="rounded-sm shadow-sm" />
+          <h3 class="text-subtitle">Projeto 1</h3>
+          <p class="text-base">
+            orem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the
+            1500s, when an unknown printer took a galley</p>
+        </div>
+        <div class="card text-center">
+          <img
+            src="https://source.unsplash.com/ZCHj_2lJP00/200x200"
+            alt="Capa do projeto 2"
+            loading="lazy"
+            class="rounded-sm shadow-sm" />
+          <h3 class="text-subtitle">Projeto 2</h3>
+          <p class="text-base">
+            orem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the
+            1500s, when an unknown printer took a galley</p>
+        </div>
+        <div class="card text-center">
+          <img
+            src="https://source.unsplash.com/ZhQCZjr9fHo/200x200"
+            alt="Capa do projeto 3"
+            loading="lazy"
+            class="rounded-sm shadow-sm" />
+          <h3 class="text-subtitle">Projeto 3</h3>
+          <p class="text-base">
+            orem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the
+            1500s, when an unknown printer took a galley</p>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="grey">
+      <h2 class="text-center text-title">Sobre</h2>
+      <div class="flex gap-default justify-space-around flex-column flex-row-md">
+        <div>
+          <p class="text-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
+          from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+          looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of
+          the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
+          of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise
+          on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
+          amet..", comes from a line in section 1.10.32.</p>
+        </div>
+        <div>
+          <p class="text-base">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
+          from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+          looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of
+          the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
+          of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise
+          on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit
+          amet..", comes from a line in section 1.10.32.</p>
+        </div>
+      </div>
+    </section>
+    <footer class="text-center">
+      <a href="mailto:my.email@email.com" class="text-base primary--text">my.email@email.com</a>
+      <div class="footer-sociais">
+        <a
+          href="#" target="_blank"
+          target="_blank"
+          class="primary--text"><i class="mdi mdi-github"></i></a>
+        <a
+          href="https://www.linkedin.com/in/igor-ferreira-pastoreli-702685149/"
+          target="_blank"
+          class="primary--text"><i class="mdi mdi-linkedin"></i></a>
+        <a
+          href="#"
+          target="_blank"
+          class="primary--text"><i class="mdi mdi-facebook"></i></a>
+      </div>
+    </footer>
+  </body>
+  <script>
+    let isMenuOpen = false
+    function handleMenu () {
+      const menu = document.getElementById('header-menu')
+      if(isMenuOpen) {
+        menu.classList.add('none')
+        menu.classList.remove('flex')
+      } else {
+        menu.classList.remove('none')
+        menu.classList.add('flex')
+      }
+      isMenuOpen = !isMenuOpen
+    }
+  </script>
+</html>
